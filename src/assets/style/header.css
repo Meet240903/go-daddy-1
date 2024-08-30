@@ -1,0 +1,266 @@
+.header {
+  background-color: #242421;
+  padding: 0 2rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  color: white;
+  position: relative;
+}
+
+.logo-image {
+  width: 140px;
+  height: auto;
+}
+
+.nav-toggle {
+  display: none;
+  background: none;
+  border: none;
+  color: white;
+  font-size: 1.5rem;
+  cursor: pointer;
+  z-index: 2;
+  /* Ensure toggle button is on top */
+}
+
+/* Container for nav and header-right */
+.nav-container {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  flex-grow: 1;
+}
+
+.nav {
+  display: flex;
+  align-items: center;
+  flex-grow: 1;
+}
+
+.nav-list {
+  list-style: none;
+  display: flex;
+  align-items: center;
+  gap: 3rem;
+  margin: 0;
+  padding: 0;
+  position: relative;
+}
+
+.nav-item {
+  cursor: pointer;
+  position: relative;
+}
+
+/* Submenu styles */
+.submenu {
+  position: absolute;
+  top: 110%;
+  left: 0;
+  background-color: #fff;
+  color: #000;
+  display: none;
+  width: 1500px;
+  /* Full width of the viewport */
+  height: 60vh;
+  /* Height set to 50% of viewport height */
+  padding: 1rem;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  z-index: 1;
+  /* Ensure submenu is on top */
+  flex-direction: row;
+  overflow-y: auto;
+  transform: translateX(-1rem);
+  /* Adjust to align with the main content */
+  box-sizing: border-box;
+  /* Include padding and border in the element's total width and height */
+}
+
+.submenu-content {
+  display: flex;
+  justify-content: space-between;
+  width: 100vh;
+}
+
+.submenu-col {
+  display: flex;
+  flex-direction: column;
+  width: 30%;
+  /* Adjust width as needed */
+}
+
+.submenu-item {
+  display: flex;
+  align-items: center;
+  margin-bottom: 1rem;
+}
+
+.submenu-icon {
+  font-size: 24px;
+  /* Adjust icon size as needed */
+  margin-right: 0.5rem;
+}
+
+.submenu-text h4 {
+  margin: 0;
+  font-size: 1rem;
+  color: #000;
+}
+
+.submenu-text p {
+  margin: 0;
+  color: #555;
+}
+
+.submenu-image {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+
+}
+
+.submenu-image img {
+  height: 360px;
+  width: 450px;
+  margin: 1rem 4rem;
+  border-radius: 5%;
+}
+
+.submenu-image img:hover {
+  transform: scale(1.1);
+}
+
+.submenu-image a {
+  text-decoration: none;
+  color: #000;
+  font-size: 1.5rem;
+  font-weight: bold;
+  margin-top: 1rem;
+}
+
+.submenu-image a:hover {
+  text-decoration: underline;
+}
+
+.submenu-close {
+  position: absolute;
+  top: 1rem;
+  right: 1rem;
+  font-size: 24px;
+  cursor: pointer;
+}
+
+/* Show submenu on hover for larger screens */
+.nav-item:hover .submenu {
+  display: flex;
+}
+
+/* Submenu toggle on click for mobile screens */
+.nav-item.open .submenu {
+  display: flex;
+}
+
+.header-right {
+  display: flex;
+  gap: 1rem;
+  align-items: center;
+}
+
+.header-link {
+  cursor: pointer;
+}
+
+.cart-icon {
+  font-size: 1.7rem;
+  cursor: pointer;
+}
+
+/* Responsive styles */
+@media (max-width: 768px) {
+  .nav-toggle {
+    display: block;
+    /* Show toggle button on small screens */
+  }
+
+  .nav-container {
+    display: none;
+    /* Hide by default */
+    flex-direction: column;
+    position: fixed;
+    /* Fixed position to overlay the content */
+    top: 60px;
+    /* Adjust based on header height */
+    left: 0;
+    width: 100%;
+    height: calc(100vh - 60px);
+    /* Full height minus header */
+    background-color: #242421;
+    z-index: 1;
+    /* Ensure it is on top */
+  }
+
+  .nav-container.open {
+    display: flex;
+    /* Show when nav is open */
+  }
+
+  .nav,
+  .header-right {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    padding: 1rem;
+  }
+
+  .nav-list {
+    flex-direction: column;
+    gap: 1rem;
+  }
+
+  .header-right {
+    flex-direction: column;
+    gap: 1rem;
+  }
+
+  .submenu {
+    position: static;
+    /* Change to static for small screens */
+    display: none;
+    /* Hide submenu by default */
+    width: 100%;
+    height: 100vh;
+    /* Full width for submenu */
+    flex-direction: column;
+    /* Stack submenu items vertically */
+  }
+
+  .nav-item.open .submenu {
+    display: flex;
+    /* Show submenu when nav-item is open */
+  }
+
+  .submenu-content {
+    flex-direction: column;
+    width: 100%;
+    /* Stack submenu columns vertically */
+    gap: 1rem;
+    /* Add gap between submenu columns */
+  }
+
+  .submenu-col {
+    width: 100%;
+    /* Full width for submenu columns */
+  }
+
+  .submenu-image img {
+    max-height: 200px;
+    /* Adjust image height for smaller screens */
+    width: 100%;
+    /* Ensure the image scales with its container */
+    object-fit: cover;
+    /* Maintain image aspect ratio */
+  }
+}
