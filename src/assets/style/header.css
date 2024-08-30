@@ -179,6 +179,10 @@
 
 /* Responsive styles */
 @media (max-width: 768px) {
+  /* .header {
+    width: 100%;
+  } */
+
   .nav-toggle {
     display: block;
     /* Show toggle button on small screens */

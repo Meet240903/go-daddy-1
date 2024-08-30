@@ -1,0 +1,190 @@
+/* Container styling */
+.home-domain-ai-section {
+  display: flex;
+  justify-content: space-between;
+  margin: 1rem 4rem;
+  gap: 1rem;
+  flex-wrap: wrap;
+}
+
+/* Left side styling */
+.image-container {
+  position: relative;
+  width: 72%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.image-container img {
+  border-radius: 15px;
+  width: 100%;
+  height: auto;
+}
+
+.domain-image {
+  width: 100%;
+  height: auto;
+  border-radius: 15px;
+}
+
+.text-overlay {
+  position: absolute;
+  top: 20%;
+  left: 5%;
+  padding: 2rem;
+  color: #fff;
+  max-width: 40%;
+  z-index: 1;
+}
+
+.text-overlay h2,
+.text-overlay h1,
+.text-overlay p,
+.text-overlay button {
+  margin: 0.5rem 0;
+}
+
+.learn-more-button {
+  background-color: #00838C;
+  color: white;
+  padding: 0.75rem 1.5rem;
+  border: none;
+  border-radius: 4px;
+  font-weight: 700;
+  font-size: 1rem;
+  cursor: pointer;
+}
+
+.learn-more-button:hover {
+  background-color: #09757A;
+}
+
+/* Right side card styling */
+.card-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-color: #000;
+  color: white;
+  width: 25%;
+  padding: 1rem;
+  border-radius: 15px;
+  text-align: center;
+}
+
+.card-text {
+  font-weight: bold;
+  font-size: 1.2rem;
+  margin-bottom: 0.5rem;
+}
+
+.card-description {
+  margin-bottom: 1.5rem;
+  font-size: 1rem;
+  font-weight: 800;
+}
+
+.try-domain-button {
+  background-color: #00838C;
+  color: white;
+  padding: 0.75rem 1.5rem;
+  border: none;
+  border-radius: 4px;
+  font-weight: 700;
+  font-size: 1rem;
+  cursor: pointer;
+  position: relative;
+}
+
+.try-domain-button:hover {
+  background-color: #09757A;
+}
+
+.try-domain-button:hover .arrow-icon {
+  display: inline-block;
+  transform: translateX(5px);
+}
+
+.arrow-icon {
+  display: none;
+  margin-left: 5px;
+  transition: transform 0.3s ease;
+}
+
+/* Responsive styles */
+@media (max-width: 1024px) {
+  .home-domain-ai-section {
+    flex-direction: column;
+    align-items: center;
+    margin: 1rem;
+  }
+
+  .image-container {
+    width: 100%;
+    display: flex;
+    flex-direction: column-reverse;
+    /* Reverses the order of children */
+    align-items: center;
+  }
+
+  .image-container img {
+    width: 90%;
+    height: auto;
+  }
+
+  .text-overlay {
+    position: relative;
+    top: 0;
+    left: 0;
+    max-width: 80%;
+    text-align: center;
+    background-color: rgba(0, 0, 0, 0.5);
+    /* Optional: adds a background to text for better readability */
+    padding: 1rem;
+    margin-bottom: 1rem;
+  }
+
+  .card-container {
+    margin-top: 2rem;
+    width: 80%;
+    /* Make sure the card fits on smaller screens */
+  }
+}
+
+@media (max-width: 768px) {
+  .text-overlay h1 {
+    font-size: 2rem;
+  }
+
+  .text-overlay p {
+    font-size: 1rem;
+  }
+
+  .learn-more-button,
+  .try-domain-button {
+    padding: 0.5rem 1rem;
+    font-size: 0.875rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .text-overlay h1 {
+    font-size: 1.5rem;
+  }
+
+  .text-overlay p {
+    font-size: 0.875rem;
+  }
+
+  .learn-more-button,
+  .try-domain-button {
+    padding: 0.5rem 0.75rem;
+    font-size: 0.75rem;
+  }
+
+  .card-container {
+    padding: 1rem;
+  }
+}

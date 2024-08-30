@@ -1,11 +1,13 @@
 import React from "react";
 import Header from "./components/Header";
+import Home from "./components/Home";
 // Adjust the path according to your file structure
 
 const App = () => {
 	return (
 		<div>
 			<Header />
+			<Home />
 			{/* Other components and content */}
 		</div>
 	);
