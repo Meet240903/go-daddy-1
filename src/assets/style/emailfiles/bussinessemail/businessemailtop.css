@@ -1,0 +1,187 @@
+/* Main container with flexbox for image and content */
+.email-container {
+  display: flex;
+  flex-wrap: wrap;
+  padding: 2rem;
+  border-radius: 10px;
+  align-items: center;
+  max-width: 1700px;
+  margin: 0 auto;
+  margin-right: 3rem;
+}
+
+/* Left side image styling */
+.email-image img {
+  border-radius: 10px;
+  width: 100%;
+  max-width: 1000px;
+}
+
+/* Right side content styling */
+.email-content {
+  flex: 1;
+  padding-left: 2rem;
+}
+
+h2 {
+  font-size: 2rem;
+  color: #333;
+}
+
+p {
+  font-size: 1.2rem;
+  color: #555;
+  line-height: 1.6;
+}
+
+/* Features section */
+.features {
+  /* margin-top: 1rem; */
+}
+
+.feature-item {
+  display: flex;
+  align-items: center;
+  /* margin-bottom: 1rem; */
+}
+
+.feature-icon {
+  margin-right: 1rem;
+  font-size: 1.5rem;
+  color: black;
+}
+
+/* Button styling */
+.pricing-button {
+  background-color: black;
+  color: white;
+  border: none;
+  padding: 0.8rem 1.5rem;
+  border-radius: 5px;
+  margin: 1.5rem 0;
+  cursor: pointer;
+  font-size: 1rem;
+  display: flex;
+  align-items: center;
+}
+
+.pricing-button:hover {
+  background-color: #333;
+}
+
+.arrow-icon {
+  margin-left: 0.5rem;
+  transition: transform 0.3s ease;
+}
+
+.pricing-button:hover .arrow-icon {
+  transform: translateX(5px);
+}
+
+/* Star rating */
+.rating {
+  display: flex;
+  align-items: center;
+  margin-bottom: 1rem;
+}
+
+.star-icon {
+  color: #00ad6a;
+}
+
+.rating-text {
+  font-size: 1rem;
+  color: #555;
+}
+
+/* View all link */
+.view-all-link {
+  color: black;
+  text-decoration: none;
+  font-size: 1rem;
+}
+
+.view-all-link:hover {
+  text-decoration: underline;
+}
+
+/* Responsive design */
+@media (max-width: 768px) {
+  .email-container {
+    flex-direction: column;
+    text-align: left;
+    margin: 0;
+  }
+
+  .features {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+    align-items: flex-start;
+    margin-top: 1rem;
+  }
+
+  .feature-item {
+    margin-bottom: 1rem;
+  }
+
+  .email-content {
+    padding-left: 0;
+    margin-top: 1.5rem;
+  }
+
+  .email-image img {
+    max-width: 100%;
+  }
+
+  .pricing-button {
+    justify-content: center;
+  }
+
+  .rating {
+    justify-content: center;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .email-container {
+    padding: 1rem;
+  }
+
+  .email-content {
+    padding-left: 0;
+  }
+
+  .email-image img {
+    max-width: 100%;
+  }
+
+  .features {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+    align-items: flex-start;
+    margin-top: 1rem;
+  }
+
+  .feature-item {
+    margin-bottom: 1rem;
+  }
+
+  .feature-icon {
+    display: flex;
+    justify-content: flex-start;
+    align-items: flex-start;
+  }
+
+  .pricing-button {
+    justify-content: center;
+  }
+
+  .rating {
+    display: flex;
+    justify-content: flex-start;
+    align-items: flex-start;
+    flex-direction: column;
+  }
+}

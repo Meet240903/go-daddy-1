@@ -1,0 +1,95 @@
+.faq-container {
+  text-align: center;
+  padding: 20px;
+  font-family: Arial, sans-serif;
+}
+
+h1 {
+  font-size: 2rem;
+  margin-bottom: 20px;
+}
+
+.plans-button {
+  background-color: black;
+  color: white;
+  padding: 10px 20px;
+  border: none;
+  cursor: pointer;
+  font-size: 1.2rem;
+  transition: all 0.3s ease;
+  margin-bottom: 40px;
+}
+
+.plans-button .arrow {
+  display: none;
+}
+
+.plans-button:hover .arrow {
+  display: inline-block;
+}
+
+.faq-section {
+  max-width: 800px;
+  margin: 0 auto;
+  text-align: left;
+}
+
+.faq-item {
+  margin-bottom: 20px;
+  cursor: pointer;
+}
+
+.faq-question {
+  font-size: 1.2rem;
+  display: flex;
+  justify-content: space-between;
+  background-color: #f0f0f0;
+  padding: 10px;
+  border-radius: 5px;
+}
+
+.faq-arrow {
+  margin-left: 10px;
+  font-size: 1.5rem;
+}
+
+.faq-answer {
+  font-size: 1rem;
+  margin-top: 10px;
+  background-color: #e9e9e9;
+  padding: 10px;
+  border-radius: 5px;
+}
+
+@media (max-width: 768px) {
+  .plans-button {
+    font-size: 1rem;
+    padding: 8px 16px;
+  }
+
+  .faq-question {
+    font-size: 1rem;
+  }
+
+  .faq-arrow {
+    font-size: 1.2rem;
+  }
+
+  h1 {
+    font-size: 1.8rem;
+  }
+}
+
+@media (max-width: 480px) {
+  h1 {
+    font-size: 1.5rem;
+  }
+
+  .faq-section {
+    font-size: 0.9rem;
+  }
+
+  .faq-answer {
+    font-size: 0.85rem;
+  }
+}

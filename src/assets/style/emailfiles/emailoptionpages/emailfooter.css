@@ -1,0 +1,68 @@
+/* Main container with gray background */
+.plans-container {
+  background-color: #dcdfe3;
+  padding: 2rem;
+  border-radius: 10px;
+  max-width: 1600px;
+  margin: 0 auto;
+}
+
+/* Header section */
+.plans-header {
+  display: flex;
+  align-items: center;
+  margin-bottom: 1.5rem;
+}
+
+.plus-icon {
+  margin-right: 1rem;
+  color: black;
+}
+
+h2 {
+  font-size: 1.8rem;
+  color: black;
+}
+
+/* Features grid */
+.plans-features {
+  display: flex;
+  /* flex-wrap: wrap; */
+  justify-content: space-between;
+  gap: 1rem;
+}
+
+/* Feature column styling */
+.feature {
+  background-color: white;
+  padding: 1.5rem;
+  border-radius: 8px;
+  flex: 1 1 calc(25% - 1rem);
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+  text-align: center;
+}
+
+.feature h3 {
+  margin: 1rem 0;
+  font-size: 1.4rem;
+}
+
+.feature p {
+  font-size: 1rem;
+  color: #333;
+}
+
+.icon {
+  color: black;
+}
+
+/* Responsiveness */
+@media (max-width: 768px) {
+  .plans-features {
+    flex-direction: column;
+  }
+
+  .feature {
+    flex: 1 1 100%;
+  }
+}

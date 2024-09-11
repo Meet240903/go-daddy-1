@@ -1,0 +1,92 @@
+.contact-container {
+  width: 100%;
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 400px;
+  align-items: center;
+}
+
+.contact-image-section {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  width: 100%;
+  position: relative;
+  max-width: 1200px;
+}
+
+.contact-image {
+  width: 100%;
+  max-width: 1500px;
+  height: auto;
+  position: relative;
+}
+
+.contact-info {
+  margin-top: 20px;
+  top: 40%;
+  width: 60%;
+  padding: 0 20px;
+  position: absolute;
+}
+
+.contact-box {
+  display: flex;
+  justify-content: space-around;
+  background-color: #f0f0f0;
+  position: absolute;
+  top: 77%;
+  border: 1px solid black;
+  padding: 20px;
+  width: 100%;
+  max-width: 1300px;
+  margin-top: 20px;
+}
+
+.contact-column {
+  width: 45%;
+}
+
+.chat-button {
+  background-color: black;
+  border: 1px solid #ccc;
+  padding: 10px 20px;
+  cursor: pointer;
+  color: #f0f0f0;
+}
+
+.chat-button:hover {
+  background-color: #f0f0f0;
+  color: black;
+}
+
+/* Responsive styling */
+@media (max-width: 768px) {
+  .contact-container {
+    margin-bottom: 55rem;
+  }
+
+  .contact-box {
+    flex-direction: column;
+    width: 90%;
+    margin-top: 10px;
+  }
+
+  .contact-info {
+    width: 100%;
+    top: 80%;
+    padding: 0 20px;
+  }
+
+  .contact-column {
+    width: 100%;
+    margin-bottom: 20px;
+  }
+}
+
+@media (max-width: 480px) {
+  .contact-info {
+    top: 100%;
+  }
+}

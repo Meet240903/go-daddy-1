@@ -1,0 +1,116 @@
+.email-plans-container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 2rem;
+  padding: 2rem;
+  margin: 0 10rem;
+}
+
+.email-plan-card {
+  background-color: #f9f9f9;
+  border-radius: 10px;
+  padding: 2rem;
+  width: 23%;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  /* text-align: center; */
+  transition: transform 0.3s ease;
+}
+
+.email-plan-card:hover {
+  transform: translateY(-5px);
+}
+
+.email-plan-card h2 {
+  font-size: 1.5rem;
+  margin-bottom: 1rem;
+}
+
+.email-plan-card p {
+  font-size: 1rem;
+  margin: 0.5rem 0;
+  font-weight: 500;
+}
+
+.save-discount {
+  color: #ff4500;
+  font-weight: bold;
+  margin-top: 1rem;
+}
+
+.pricing {
+  font-size: 1.2rem;
+  margin: 1rem 0;
+}
+
+.old-price {
+  text-decoration: line-through;
+  margin-right: 0.5rem;
+}
+
+.new-price {
+  color: #28a745;
+  font-size: 2rem;
+  font-weight: bold;
+}
+
+.add-to-cart {
+  background-color: black;
+  color: white;
+  width: 100%;
+  border: 2px solid black;
+  padding: 0.75rem 1.5rem;
+  margin-top: 1rem;
+  cursor: pointer;
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.add-to-cart:hover {
+  background-color: white;
+  color: black;
+}
+
+.microsoft-icons {
+  display: flex;
+  justify-content: flex-start;
+  gap: 1rem;
+  margin-top: 1rem;
+}
+
+.microsoft-icons svg {
+  color: #0078d4;
+}
+
+/* Responsive Design */
+@media (max-width: 1024px) {
+  .email-plan-card {
+    width: 45%;
+  }
+}
+
+@media (max-width: 768px) {
+  .email-plan-card {
+    width: 100%;
+  }
+
+  .email-tabs-container {
+    margin: 0;
+
+  }
+
+  .email-plans-container {
+    margin: 0;
+  }
+}
+
+@media (max-width: 480px) {
+  .microsoft-icons {
+    display: flex;
+    margin-left: 0;
+    margin-right: 0;
+
+    align-items: center;
+  }
+}

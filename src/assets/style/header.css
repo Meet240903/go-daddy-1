@@ -2,6 +2,7 @@
   background-color: #242421;
   padding: 0 2rem;
   display: flex;
+  width: 100%;
   align-items: center;
   justify-content: space-between;
   color: white;
@@ -53,34 +54,37 @@
   position: relative;
 }
 
+.router-link {
+  color: #fff;
+  text-decoration: none;
+}
+
 /* Submenu styles */
-.submenu {
+.domain-submenu {
   position: absolute;
   top: 110%;
-  left: 0;
+  left: -150px;
   background-color: #fff;
   color: #000;
-  display: none;
+  display: flex;
+  justify-content: space-around;
   width: 1500px;
-  /* Full width of the viewport */
-  height: 60vh;
-  /* Height set to 50% of viewport height */
+  height: auto;
   padding: 1rem;
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-  z-index: 1;
-  /* Ensure submenu is on top */
+  z-index: 9;
   flex-direction: row;
-  overflow-y: auto;
   transform: translateX(-1rem);
-  /* Adjust to align with the main content */
   box-sizing: border-box;
-  /* Include padding and border in the element's total width and height */
+  overflow: hidden;
 }
 
 .submenu-content {
   display: flex;
   justify-content: space-between;
   width: 100vh;
+  align-items: center;
+
 }
 
 .submenu-col {
@@ -100,6 +104,10 @@
   font-size: 24px;
   /* Adjust icon size as needed */
   margin-right: 0.5rem;
+}
+
+.submenu-col h3 {
+  margin-bottom: 5rem;
 }
 
 .submenu-text h4 {
@@ -152,6 +160,63 @@
   cursor: pointer;
 }
 
+.website-hosting-submenu {
+  position: absolute;
+  top: 110%;
+  left: -280px;
+  background-color: #fff;
+  color: #000;
+  display: flex;
+  justify-content: space-between;
+  width: 1500px;
+  height: auto;
+  padding: 1rem;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  z-index: 9;
+  flex-direction: row;
+  transform: translateX(-1rem);
+  box-sizing: border-box;
+  overflow: hidden;
+}
+
+.security-submenu {
+  position: absolute;
+  top: 110%;
+  left: -500px;
+  background-color: #fff;
+  color: #000;
+  display: flex;
+  justify-content: space-between;
+  width: auto;
+  height: auto;
+  padding: 1rem;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  z-index: 9;
+  flex-direction: row;
+  transform: translateX(-1rem);
+  box-sizing: border-box;
+  overflow: hidden;
+}
+
+.marketing-submenu {
+  position: absolute;
+  top: 110%;
+  left: -560px;
+  background-color: #fff;
+  color: #000;
+  display: flex;
+  justify-content: center;
+  width: auto;
+  height: auto;
+  padding: 1rem;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  z-index: 9;
+  flex-direction: row;
+  transform: translateX(-1rem);
+  box-sizing: border-box;
+  overflow: hidden;
+}
+
 /* Show submenu on hover for larger screens */
 .nav-item:hover .submenu {
   display: flex;
@@ -190,19 +255,14 @@
 
   .nav-container {
     display: none;
-    /* Hide by default */
     flex-direction: column;
     position: fixed;
-    /* Fixed position to overlay the content */
     top: 60px;
-    /* Adjust based on header height */
     left: 0;
     width: 100%;
     height: calc(100vh - 60px);
-    /* Full height minus header */
     background-color: #242421;
-    z-index: 1;
-    /* Ensure it is on top */
+    z-index: 999;
   }
 
   .nav-container.open {
@@ -229,19 +289,55 @@
     gap: 1rem;
   }
 
-  .submenu {
-    position: static;
-    /* Change to static for small screens */
-    display: none;
-    /* Hide submenu by default */
-    width: 100%;
-    height: 100vh;
+  .domain-submenu {
+    position: relative;
+    top: 0;
+    left: 20px;
+    width: 400px;
+    height: auto;
+    /* overflow: scroll; */
     /* Full width for submenu */
     flex-direction: column;
     /* Stack submenu items vertically */
   }
 
-  .nav-item.open .submenu {
+  .website-hosting-submenu {
+    position: relative;
+    top: 0;
+    left: 20px;
+    width: 400px;
+    height: auto;
+    /* overflow: scroll; */
+    /* Full width for submenu */
+    flex-direction: column;
+    /* Stack submenu items vertically */
+  }
+
+  .security-submenu {
+    position: relative;
+    top: 0;
+    left: 20px;
+    width: 400px;
+    height: auto;
+    /* overflow: scroll; */
+    /* Full width for submenu */
+    flex-direction: column;
+    /* Stack submenu items vertically */
+  }
+
+  .marketing-submenu {
+    position: relative;
+    top: 0;
+    left: 20px;
+    width: 400px;
+    height: auto;
+    /* overflow: scroll; */
+    /* Full width for submenu */
+    flex-direction: column;
+    /* Stack submenu items vertically */
+  }
+
+  .nav-item.open .domain-submenu {
     display: flex;
     /* Show submenu when nav-item is open */
   }
@@ -260,11 +356,12 @@
   }
 
   .submenu-image img {
-    max-height: 200px;
-    /* Adjust image height for smaller screens */
+    display: none;
+  }
+}
+
+@media (max-width: 768px) {
+  .header {
     width: 100%;
-    /* Ensure the image scales with its container */
-    object-fit: cover;
-    /* Maintain image aspect ratio */
   }
 }

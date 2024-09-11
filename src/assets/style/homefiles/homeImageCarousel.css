@@ -1,0 +1,124 @@
+/* Main container for the slider */
+.slider-container {
+  background-color: lightgray;
+  /* Background color for the container */
+  padding: 20px;
+  /* Padding inside the container */
+  text-align: center;
+  /* Center-align text */
+  overflow: hidden;
+  /* Hide overflowing content to keep the slider contained */
+  width: 100%;
+  /* Full width for responsiveness */
+  box-sizing: border-box;
+  /* Include padding in the width calculation */
+}
+
+.slider-container h1 {
+  font-size: 3rem;
+  margin-bottom: 20px;
+}
+
+/* Slider wrapper to control animation */
+.slider {
+  display: flex;
+  /* Align images horizontally */
+  align-items: center;
+  /* Center images vertically */
+  overflow: hidden;
+  /* Hide overflowing content */
+  position: relative;
+  /* Positioning for additional styling if needed */
+}
+
+/* Content wrapper for images with animation */
+.slider-content {
+  display: flex;
+  /* Flex container to align images */
+  animation: scroll 30s linear infinite;
+  /* Infinite scrolling animation */
+}
+
+/* Individual image styling */
+.slider-image {
+  width: auto;
+  /* Image width auto to maintain aspect ratio */
+  height: 300px;
+  /* Initial height for images */
+  border-radius: 10px;
+  /* Rounded corners for images */
+  margin-right: 50px;
+  /* Space between images */
+  transition: transform 0.3s ease;
+  /* Smooth transition on hover */
+}
+
+/* Animation control when paused */
+.paused .slider-content {
+  animation-play-state: paused;
+  /* Pause the animation */
+}
+
+.try-domain-button {
+  background-color: black;
+  color: white;
+  padding: 0.75rem 1.5rem;
+  border: none;
+  border-radius: 4px;
+  font-weight: 700;
+  font-size: 1rem;
+  cursor: pointer;
+  position: relative;
+}
+
+.try-domain-button:hover {
+  background-color: black;
+}
+
+.try-domain-button:hover .arrow-icon {
+  display: inline-block;
+  transform: translateX(5px);
+}
+
+.arrow-icon {
+  display: none;
+  margin-left: 5px;
+  transition: transform 0.3s ease;
+}
+
+/* Keyframes for scrolling animation */
+@keyframes scroll {
+  0% {
+    transform: translateX(100%);
+    /* Start off-screen to the right */
+  }
+
+  100% {
+    transform: translateX(-100%);
+    /* End off-screen to the left */
+  }
+}
+
+/* Responsive styling for tablet screens */
+@media (max-width: 1024px) {
+  .slider-image {
+    height: 250px;
+    /* Adjust height for tablet screens */
+  }
+}
+
+/* Responsive styling for mobile screens */
+@media (max-width: 768px) {
+  .slider-image {
+    height: 200px;
+    /* Adjust height for mobile screens */
+  }
+}
+
+/* Responsive styling for small mobile screens */
+@media (max-width: 480px) {
+  .slider-image {
+    height: 150px;
+    /* Adjust height for smaller mobile screens */
+  }
+}

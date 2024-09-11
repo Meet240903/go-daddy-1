@@ -1,0 +1,135 @@
+/* General container styling remains the same */
+.professional_image_container {
+  margin: 5rem 20rem;
+  display: flex;
+  flex-direction: column;
+  gap: 3rem;
+}
+
+/* Section styling remains the same */
+.professional_image_section {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: 1rem;
+}
+
+/* Left content and right content remain the same */
+.professional_image_left-content,
+.professional_image_right-content {
+  flex: 1;
+  padding: 1rem;
+}
+
+/* Image styling remains the same */
+.professional_image_left-image img,
+.professional_image_right-image img {
+  width: 100%;
+  height: auto;
+  border-radius: 10px;
+}
+
+.professional_image_left-image,
+.professional_image_right-image {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* Button styling remains the same */
+.professional_image_pricing-button {
+  display: inline-flex;
+  align-items: center;
+  background-color: transparent;
+  border: 2px solid black;
+  padding: 0.5rem 1rem;
+  color: black;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: background-color 0.3s, color 0.3s;
+}
+
+.professional_image_pricing-button:hover {
+  background-color: black;
+  color: white;
+}
+
+.professional_image_pricing-button .professional_image_arrow-icon {
+  margin-left: 0.5rem;
+  transition: margin-left 0.3s;
+}
+
+.professional_image_pricing-button:hover .professional_image_arrow-icon {
+  margin-left: 1rem;
+}
+
+/* Responsive Design */
+
+/* For smaller screens (max-width: 1024px) */
+@media (max-width: 1024px) {
+  .professional_image_container {
+    margin: 3rem 5rem;
+  }
+}
+
+/* For tablets and small laptops (max-width: 768px) */
+@media (max-width: 768px) {
+  .professional_image_container {
+    margin: 2rem;
+  }
+
+  .professional_image_section {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .reverse {
+    flex-direction: column;
+  }
+
+  .professional_image_left-image img,
+  .professional_image_right-image img {
+    width: 100%;
+  }
+
+  .professional_image_left-content,
+  .professional_image_right-content {
+    padding: 0.5rem;
+  }
+}
+
+/* For mobile devices (max-width: 480px) */
+@media (max-width: 480px) {
+  .professional_image_container {
+    margin: 1rem;
+  }
+
+  .professional_image_section {
+    flex-direction: column;
+    gap: 1rem;
+  }
+
+  .professional_image_left-content,
+  .professional_image_right-content {
+    padding: 0.5rem;
+  }
+
+  .professional_image_left-image img,
+  .professional_image_right-image img {
+    width: 100%;
+  }
+
+  .professional_image_pricing-button {
+    font-size: 0.9rem;
+    padding: 0.4rem 0.8rem;
+  }
+
+  h2 {
+    font-size: 1.2rem;
+  }
+
+  p {
+    font-size: 0.9rem;
+  }
+}

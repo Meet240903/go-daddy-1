@@ -6,9 +6,9 @@ const HomeDomainAiSection = () => {
 	return (
 		<div className="home-domain-ai-section">
 			{/* Left side image and text */}
-			<div className="image-container">
+			<div className="home-domain-ai-image-container">
 				<img src={domainai} />
-				<div className="text-overlay">
+				<div className="home-domain-ai-text-overlay">
 					<button>NEW</button>
 					<h2>GoDaddy Airo™</h2>
 					<h1>Put your domain into action with AI.</h1>
@@ -16,19 +16,22 @@ const HomeDomainAiSection = () => {
 						Buy a new domain and get GoDaddy Airo™, our customizable, AI-powered
 						solution that can easily deliver a website, logo, and more.
 					</p>
-					<button className="learn-more-button">Learn More</button>
+					<button className="home-domain-ai-learn-more-button">
+						Learn More
+					</button>
 				</div>
 			</div>
 
 			{/* Right side card */}
-			<div className="card-container">
+			<div className="home-domain-ai-card-container">
 				<button>NEW</button>
-				<p className="card-text">AI Suggested Domains</p>
-				<p className="card-description">
+				<p className="home-domain-ai-card-text">AI Suggested Domains</p>
+				<p className="home-domain-ai-card-description">
 					Find the perfect domain and business name with AI.
 				</p>
-				<button className="try-domain-button">
-					Try All Domain Search <span className="arrow-icon">→</span>
+				<button className="home-domain-ai-try-domain-button">
+					Try All Domain Search{" "}
+					<span className="home-domain-ai-arrow-icon">→</span>
 				</button>
 			</div>
 		</div>

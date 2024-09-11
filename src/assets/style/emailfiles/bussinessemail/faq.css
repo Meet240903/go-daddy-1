@@ -1,0 +1,80 @@
+/* Container styling */
+.faq-container {
+  margin: 10rem 10rem;
+  text-align: center;
+  width: 50%;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+/* Header styling */
+.faq-header {
+  font-size: 2rem;
+  margin-bottom: 2rem;
+  margin-left: auto;
+  margin-right: auto;
+  width: 50%;
+  text-align: center;
+}
+
+/* FAQ Section */
+.faq-section {
+  text-align: center;
+  margin-top: 6rem;
+}
+
+/* Individual FAQ item */
+.faq-item {
+  margin-bottom: 1rem;
+}
+
+/* Question styling */
+.faq-question {
+  cursor: pointer;
+  font-size: 1.25rem;
+  font-weight: bold;
+  margin-bottom: 0.5rem;
+}
+
+/* Answer styling */
+.faq-answer {
+  font-size: 1rem;
+  line-height: 1.5;
+  margin-top: 0.5rem;
+}
+
+/* Horizontal line styling */
+hr {
+  border: none;
+  border-bottom: 1px solid #ccc;
+  margin-top: 1rem;
+  margin-bottom: 1rem;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .faq-container {
+    margin: 1.5rem 2rem;
+    text-align: center;
+  }
+
+  .faq-item {
+    text-align: center;
+  }
+
+  .faq-header {
+    font-size: 1.5rem;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .faq-container {
+    width: 80%;
+    text-align: center;
+  }
+
+  .faq-header {
+    width: 80%;
+    text-align: center;
+  }
+}

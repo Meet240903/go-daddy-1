@@ -1,0 +1,113 @@
+* {
+  box-sizing: border-box;
+  /* Ensure padding and borders are included in element's width */
+}
+
+.footer {
+  background-color: black;
+  color: white;
+  padding: 40px 100px;
+  width: 100%;
+  max-width: 100%;
+  /* Prevent horizontal overflow */
+  overflow-x: hidden;
+  /* Hide any potential overflow */
+}
+
+.footer-top {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  margin-bottom: 30px;
+}
+
+.footer-column {
+  flex: 1 1 20%;
+  margin-bottom: 20px;
+}
+
+.footer-column h4 {
+  font-size: 1.2rem;
+  margin-bottom: 10px;
+}
+
+.footer-column ul {
+  list-style: none;
+  padding: 0;
+}
+
+.footer-column ul li {
+  margin-bottom: 8px;
+  cursor: pointer;
+}
+
+.footer-bottom {
+  text-align: center;
+}
+
+.footer-socials {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 20px;
+}
+
+.footer-logo {
+  height: 80px;
+  width: 150px;
+}
+
+.social-icons {
+  display: flex;
+  gap: 15px;
+  font-size: 1.5rem;
+}
+
+hr {
+  border: 0.5px solid #444;
+  margin-bottom: 20px;
+}
+
+.footer-copyright p {
+  font-size: 0.9rem;
+  line-height: 1.5;
+  margin: 0;
+}
+
+@media (max-width: 768px) {
+  .footer-top {
+    flex-direction: column;
+  }
+
+  .footer-column {
+    flex: 1 1 100%;
+  }
+
+  .footer-socials {
+    flex-direction: column;
+    gap: 15px;
+  }
+}
+
+@media (max-width: 480px) {
+  .footer {
+    padding: 20px;
+    /* Reduce padding on smaller screens */
+  }
+
+  .footer-column ul li {
+    font-size: 0.9rem;
+  }
+
+  .footer-socials {
+    flex-direction: column;
+  }
+
+  .footer-logo {
+    height: 40px;
+  }
+
+  .social-icons {
+    font-size: 1.2rem;
+  }
+}

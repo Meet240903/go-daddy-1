@@ -1,0 +1,112 @@
+.microsoft365-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  padding: 20px;
+}
+
+.left-image img {
+  max-width: 80%;
+  height: auto;
+}
+
+.right-content {
+  max-width: 600px;
+  padding: 20px;
+}
+
+.right-content h1 {
+  font-size: 2rem;
+  margin-bottom: 1rem;
+}
+
+.right-content p,
+ul {
+  margin-bottom: 1rem;
+  font-size: 1.2rem;
+}
+
+.features-list {
+  list-style: none;
+  padding: 0;
+}
+
+.features-list li {
+  display: flex;
+  align-items: center;
+  margin-bottom: 1rem;
+}
+
+.list-icon {
+  margin-right: 10px;
+  font-size: 1.5rem;
+  color: black;
+}
+
+.pricing-button {
+  background-color: black;
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  font-size: 1.2rem;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+.pricing-button:hover {
+  background-color: #333;
+  transform: translateX(5px);
+}
+
+.arrow-icon {
+  display: none;
+}
+
+.pricing-button:hover .arrow-icon {
+  display: inline-block;
+}
+
+.rating-section {
+  margin-top: 20px;
+  display: flex;
+  align-items: center;
+}
+
+.stars {
+  display: flex;
+  color: #ffcc00;
+  margin-right: 10px;
+}
+
+.star-icon {
+  margin-right: 5px;
+}
+
+.view-all-link {
+  color: black;
+  text-decoration: none;
+  font-size: 1rem;
+}
+
+.view-all-link:hover {
+  text-decoration: underline;
+}
+
+@media (max-width: 768px) {
+  .microsoft365-container {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .right-content {
+    padding: 10px;
+  }
+
+  .pricing-button {
+    justify-content: center;
+  }
+}

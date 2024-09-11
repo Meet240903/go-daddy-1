@@ -8,44 +8,50 @@
 }
 
 /* Left side styling */
-.image-container {
+.home-domain-ai-image-container {
   position: relative;
   width: 72%;
   display: flex;
   flex-direction: column;
+
   justify-content: center;
 }
 
-.image-container img {
+.home-domain-ai-image-container img {
   border-radius: 15px;
   width: 100%;
   height: auto;
 }
 
-.domain-image {
+.home-domain-ai-domain-image {
   width: 100%;
   height: auto;
   border-radius: 15px;
 }
 
-.text-overlay {
+.home-domain-ai-text-overlay {
   position: absolute;
   top: 20%;
   left: 5%;
   padding: 2rem;
-  color: #fff;
+  color: white;
   max-width: 40%;
   z-index: 1;
 }
 
-.text-overlay h2,
-.text-overlay h1,
-.text-overlay p,
-.text-overlay button {
+.home-domain-ai-text-overlay h2,
+.home-domain-ai-text-overlay h1,
+.home-domain-ai-text-overlay p,
+.home-domain-ai-text-overlay button {
   margin: 0.5rem 0;
+  color: white;
 }
 
-.learn-more-button {
+.home-domain-ai-text-overlay button {
+  color: black;
+}
+
+.home-domain-ai-learn-more-button {
   background-color: #00838C;
   color: white;
   padding: 0.75rem 1.5rem;
@@ -56,12 +62,12 @@
   cursor: pointer;
 }
 
-.learn-more-button:hover {
+.home-domain-ai-learn-more-button:hover {
   background-color: #09757A;
 }
 
 /* Right side card styling */
-.card-container {
+.home-domain-ai-card-container {
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -74,21 +80,23 @@
   text-align: center;
 }
 
-.card-text {
+.home-domain-ai-card-text {
   font-weight: bold;
+  color: white;
   font-size: 1.2rem;
   margin-bottom: 0.5rem;
 }
 
-.card-description {
+.home-domain-ai-card-description {
   margin-bottom: 1.5rem;
+  color: white;
   font-size: 1rem;
   font-weight: 800;
 }
 
-.try-domain-button {
-  background-color: #00838C;
-  color: white;
+.home-domain-ai-card-container .home-domain-ai-try-domain-button {
+  background-color: white;
+  color: black;
   padding: 0.75rem 1.5rem;
   border: none;
   border-radius: 4px;
@@ -98,16 +106,17 @@
   position: relative;
 }
 
-.try-domain-button:hover {
-  background-color: #09757A;
+.home-domain-ai-card-container .home-domain-ai-try-domain-button:hover {
+  background-color: white;
+  color: black;
 }
 
-.try-domain-button:hover .arrow-icon {
+.home-domain-ai-card-container .home-domain-ai-try-domain-button:hover .home-domain-ai-arrow-icon {
   display: inline-block;
   transform: translateX(5px);
 }
 
-.arrow-icon {
+.home-domain-ai-card-container .home-domain-ai-arrow-icon {
   display: none;
   margin-left: 5px;
   transition: transform 0.3s ease;
@@ -121,7 +130,7 @@
     margin: 1rem;
   }
 
-  .image-container {
+  .home-domain-ai-image-container {
     width: 100%;
     display: flex;
     flex-direction: column-reverse;
@@ -129,12 +138,12 @@
     align-items: center;
   }
 
-  .image-container img {
+  .home-domain-ai-image-container img {
     width: 90%;
     height: auto;
   }
 
-  .text-overlay {
+  .home-domain-ai-text-overlay {
     position: relative;
     top: 0;
     left: 0;
@@ -146,7 +155,7 @@
     margin-bottom: 1rem;
   }
 
-  .card-container {
+  .home-domain-ai-card-container {
     margin-top: 2rem;
     width: 80%;
     /* Make sure the card fits on smaller screens */
@@ -154,37 +163,37 @@
 }
 
 @media (max-width: 768px) {
-  .text-overlay h1 {
+  .home-domain-ai-text-overlay h1 {
     font-size: 2rem;
   }
 
-  .text-overlay p {
+  .home-domain-ai-text-overlay p {
     font-size: 1rem;
   }
 
-  .learn-more-button,
-  .try-domain-button {
+  .home-domain-ai-learn-more-button,
+  .home-domain-ai-try-domain-button {
     padding: 0.5rem 1rem;
     font-size: 0.875rem;
   }
 }
 
 @media (max-width: 480px) {
-  .text-overlay h1 {
+  .home-domain-ai-text-overlay h1 {
     font-size: 1.5rem;
   }
 
-  .text-overlay p {
+  .home-domain-ai-text-overlay p {
     font-size: 0.875rem;
   }
 
-  .learn-more-button,
-  .try-domain-button {
+  .home-domain-ai-learn-more-button,
+  .home-domain-ai-try-domain-button {
     padding: 0.5rem 0.75rem;
     font-size: 0.75rem;
   }
 
-  .card-container {
+  .home-domain-ai-card-container {
     padding: 1rem;
   }
 }

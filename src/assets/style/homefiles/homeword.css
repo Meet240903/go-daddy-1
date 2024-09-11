@@ -1,0 +1,183 @@
+/* Container holding the background image and content */
+.full-width-container {
+  position: relative;
+  margin: 15rem 10rem;
+  width: calc(100% - 20rem);
+  height: 100vh;
+  overflow: hidden;
+}
+
+/* Full-width background image */
+.background-image {
+  width: 100%;
+  border-radius: 20px;
+  height: 100%;
+  object-fit: cover;
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+/* White content box on the left side */
+.content-box {
+  position: absolute;
+  top: 50%;
+  right: 3%;
+  transform: translateY(-50%);
+  background-color: white;
+  padding: 20px;
+  max-width: 35%;
+  height: 80%;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  border-radius: 8px;
+  z-index: 2;
+  box-sizing: border-box;
+}
+
+.content-box h1 {
+  font-size: 2rem;
+  margin-bottom: 20px;
+}
+
+/* Additional image on the bottom right */
+.bottom-right-image {
+  position: absolute;
+  bottom: 5%;
+  right: 5%;
+  width: 250px;
+  height: 170px;
+  z-index: 2;
+  border-radius: 8px;
+}
+
+.content-bottom {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  padding: 20px;
+  background-color: rgba(255, 255, 255, 0.8);
+  border-radius: 0 0 20px 20px;
+  z-index: 2;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+/* Style for the list and list items */
+.content-bottom ul {
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+}
+
+.content-bottom li {
+  margin-bottom: 10px;
+  font-size: 1.2rem;
+  display: flex;
+  align-items: center;
+}
+
+/* Responsive design for medium screens (tablets, etc.) */
+@media (max-width: 1024px) {
+  .full-width-container {
+    margin: 10rem 5rem;
+    width: calc(100% - 10rem);
+  }
+
+  .content-box {
+    max-width: 60%;
+    /* Increase max-width to make the content box more prominent */
+    left: 50%;
+    right: auto;
+    transform: translate(-50%, -50%);
+    padding: 15px;
+  }
+
+  .bottom-right-image {
+    width: 150px;
+    /* Adjust image size for medium screens */
+  }
+
+  .content-bottom {
+    flex-direction: column;
+    /* Stack content vertically for smaller screens */
+    align-items: flex-start;
+  }
+}
+
+/* Responsive design for small screens (mobile devices) */
+@media (max-width: 768px) {
+  .full-width-container {
+    margin: 5rem 1.5rem;
+    width: calc(100% - 3rem);
+  }
+
+  .content-box {
+    max-width: 100%;
+    background-color: lightgray;
+    /* Further increase max-width for smaller screens */
+    right: 5%;
+    transform: translate(-50%, -50%);
+    padding: 10px;
+    height: 100%;
+    /* Allow height to adjust dynamically */
+  }
+
+  .bottom-right-image {
+    width: 100px;
+    /* Adjust image size for small screens */
+  }
+
+  .content-box h1 {
+    font-size: 1.8rem;
+    /* Slightly reduce font size for smaller screens */
+  }
+
+  .content-bottom {
+    padding: 10px;
+    top: 47%;
+    flex-direction: column;
+    /* Ensure stacked layout */
+    background-color: lightgray;
+    align-items: flex-start;
+  }
+
+  .products-list ul li {
+    font-size: 12px;
+  }
+
+  .bottom-right-image {
+    display: none;
+  }
+}
+
+/* Responsive design for extra small screens (very small mobile devices) */
+@media (max-width: 480px) {
+  .full-width-container {
+    margin: 2rem 1rem;
+    width: calc(100% - 3rem);
+    height: 70vh;
+  }
+
+  .content-box {
+    width: 400px;
+    top: 80%;
+  }
+
+  .content-box h1 {
+    font-size: 22px;
+  }
+
+  .bottom-right-image {
+    width: 80px;
+    /* Further reduce image size for very small screens */
+  }
+
+  .content-bottom {
+    padding: 8px;
+    flex-direction: column;
+    /* Ensure stacked layout */
+    align-items: flex-start;
+  }
+}

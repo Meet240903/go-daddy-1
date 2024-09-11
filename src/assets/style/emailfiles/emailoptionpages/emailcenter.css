@@ -1,0 +1,96 @@
+/* Styling for the email center section */
+.email-center-section {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  padding: 10px 20px;
+  height: 40vh;
+  box-sizing: border-box;
+}
+
+.email-center-section h1 {
+  font-size: 2.8rem;
+  margin-bottom: 0.5rem;
+}
+
+.email-center-section p {
+  font-size: 1rem;
+  margin-bottom: 2rem;
+  max-width: 800px;
+}
+
+.button-container {
+  display: flex;
+  gap: 20px;
+}
+
+/* Styling for buttons */
+.email-button {
+  font-size: 1rem;
+  padding: 0.8rem 2rem;
+  border: 2px solid black;
+  background-color: white;
+  color: black;
+  cursor: pointer;
+  position: relative;
+  font-weight: 700;
+  border-radius: 10px;
+  overflow: hidden;
+}
+
+.email-button .arrow-icon {
+  display: inline-block;
+  opacity: 0;
+  margin-left: 10px;
+  transition: opacity 0.3s ease, transform 0.3s ease;
+}
+
+.email-button:hover .arrow-icon {
+  opacity: 1;
+
+  transform: translateX(5px);
+}
+
+/* Responsive Design */
+
+/* Medium screens (tablets) */
+@media screen and (max-width: 768px) {
+  .email-center-section h1 {
+    font-size: 2rem;
+  }
+
+  .email-center-section {
+    display: none;
+  }
+
+  .email-center-section p {
+    font-size: 1rem;
+  }
+
+  .button-container {
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  .email-button {
+    width: 100%;
+    padding: 0.7rem 1.5rem;
+  }
+}
+
+/* Small screens (mobile devices) */
+@media screen and (max-width: 480px) {
+  .email-center-section h1 {
+    font-size: 1.75rem;
+  }
+
+  .email-center-section p {
+    font-size: 0.9rem;
+  }
+
+  .email-button {
+    padding: 0.6rem 1.2rem;
+  }
+}
