@@ -1,403 +1,319 @@
-import React, { useState } from "react";
-import "../assets/style/header.css"; // Importing the CSS file for styling
-import logo from "../assets/images/godaddy-logo.svg";
-import domain_img from "../assets/images/domain-img.jpeg";
-import web_hosting from "../assets/images/web-hosting.jpeg";
-import security from "../assets/images/security.jpeg"; // Importing the logo image
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import {
-	faSearch,
-	faGavel,
-	faTools,
-	faArrowRight,
-	faBeer,
-	faHouseDamage,
-	faDollarSign,
-	faHandHoldingDollar,
-	faCube,
-	faUser,
-	faChevronUp,
-	faLaptopCode,
-	faStore,
-	faCog,
-	faServer,
-	faGlobe,
-	faCertificate,
-	faLock,
-	faBullhorn,
-	faPencilRuler,
-	faImages,
-} from "@fortawesome/free-solid-svg-icons";
-import FadeComponent from "./FadeAnimation"; // Ensure the path is correct
-import { Link } from "react-router-dom";
-// Icons for up/down arrows
+import React, { useState } from 'react'
+import headerLogo from '../assets/images/godaddy-logo.svg'
+import domainSubImg from '../assets/images/domain-img.jpeg'
+import webHostingSubImg from '../assets/images/web-hosting.jpeg'
+import securitySubImg from '../assets/images/security.webp'
+import marketingSubImg from '../assets/images/marketing.webp'
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+import { faArrowRight, faBars, faBeer, faBullhorn, faCartShopping, faCertificate, faCube, faDollarSign, faGavel, faGlobe, faGreaterThan, faHandHoldingDollar, faHouseDamage, faImage, faLaptopCode, faLock, faPencilRuler, faSearch, faServer, faStore, faTimes, faTools, faUser } from '@fortawesome/free-solid-svg-icons'
+import '../assets/style/header.css'
+import { Link } from 'react-router-dom'
+import FadeComponent from './FadeAnimation'
 
 const Header = () => {
-	const [isExpanded, setIsExpanded] = useState(false);
-	const [isNavOpen, setIsNavOpen] = useState(false); // State to manage the nav visibility
-	const [isDomainSubmenuOpen, setIsDomainSubmenuOpen] = useState(false); // State to manage the submenu visibility
-	const [iswebsiteHostingSubmenuOpen, setIswebsiteHostingDomainSubmenuOpen] =
-		useState(false); // State to manage the submenu visibility
-	const [isSecuritySubmenuOpen, setIsSecuritySubmenuOpen] = useState(false); // State to manage the submenu visibility
-	const [isMarketingSubmenuOpen, setIsMarketingSubmenuOpen] = useState(false); // State to manage the submenu visibility
-	const [isSigninSubmenuOpen, setIsSigninSubmenuOpen] = useState(false);
-	const toggleNav = () => {
-		setIsNavOpen(!isNavOpen);
-	};
-	const toggleContent = () => {
-		setIsExpanded(!isExpanded);
-	};
-	return (
-		<header className="header">
-			<div className="logo">
-				<Link to="/">
-					<img src={logo} alt="GoDaddy Logo" className="logo-image" />
-				</Link>
-			</div>
-			<button className="nav-toggle" onClick={toggleNav}>
-				{isNavOpen ? "✖" : "☰"}
-			</button>
-			<div className={`nav-container ${isNavOpen ? "open" : ""}`}>
-				<nav className="nav">
-					<ul className="nav-list">
-						<li
-							className="nav-item"
-							onClick={() => {
-								setIsDomainSubmenuOpen(!isDomainSubmenuOpen);
-								setIswebsiteHostingDomainSubmenuOpen(false);
-								setIsSecuritySubmenuOpen(false);
-								setIsMarketingSubmenuOpen(false);
-								setIsSigninSubmenuOpen(false);
-							}}
-						>
-							Domains{" "}
-							<FontAwesomeIcon icon={faChevronUp} className="submenu-toggle" />
-						</li>
-						{isDomainSubmenuOpen && (
-							<div className="domain-submenu">
-								<div className="submenu-content">
-									<div className="submenu-col">
-										<FadeComponent duration={1000} delay={0} direction={"left"}>
-											<h3>Find a Domain name</h3>
-											<div className="submenu-item">
-												<FontAwesomeIcon
-													icon={faSearch}
-													className="submenu-icon"
-												/>
-												<h4>Search for Domain Names</h4>
-											</div>
-											<div className="submenu-item">
-												<FontAwesomeIcon
-													icon={faBeer}
-													className="submenu-icon"
-												/>
-												<h4>Transfer Domain Names</h4>
-											</div>
-											<div className="submenu-item">
-												<FontAwesomeIcon
-													icon={faHouseDamage}
-													className="submenu-icon"
-												/>
-												<h4>Browse Domain Name Options</h4>
-											</div>
-										</FadeComponent>
-									</div>
-									<div className="submenu-col">
-										<FadeComponent duration={1000} delay={0} direction={"left"}>
-											<h3>Auctions for Domains</h3>
-											<div className="submenu-item">
-												<FontAwesomeIcon
-													icon={faGavel}
-													className="submenu-icon"
-												/>
-												<h4>Auctions for Domain Names</h4>
-											</div>
-											<div className="submenu-item">
-												<FontAwesomeIcon
-													icon={faDollarSign}
-													className="submenu-icon"
-												/>
-												<h4>Appraise Domain Name Value</h4>
-											</div>
-											<div className="submenu-item">
-												<FontAwesomeIcon
-													icon={faHandHoldingDollar}
-													className="submenu-icon"
-												/>
-												<h4>Investing in Domain Names</h4>
-											</div>
-										</FadeComponent>
-									</div>
-									<div className="submenu-col">
-										<FadeComponent duration={1000} delay={0} direction={"left"}>
-											<h3>Domain Tools and Services</h3>
-											<div className="submenu-item">
-												<FontAwesomeIcon
-													icon={faTools}
-													className="submenu-icon"
-												/>
-												<h4>Domain Tools and Services</h4>
-											</div>
-											<div className="submenu-item">
-												<FontAwesomeIcon
-													icon={faUser}
-													className="submenu-icon"
-												/>
-												<h4>Generate Domain Names</h4>
-											</div>
-											<div className="submenu-item">
-												<FontAwesomeIcon
-													icon={faCube}
-													className="submenu-icon"
-												/>
-												<h4>Find a Domain Owner (WHOIS)</h4>
-											</div>
-										</FadeComponent>
-									</div>
-								</div>
-								<div className="submenu-image">
-									<FadeComponent duration={1000} delay={0} direction={"left"}>
-										<img src={domain_img} alt="Domain Image" />
-									</FadeComponent>
-									<FadeComponent duration={1000} delay={0} direction={"left"}>
-										<a href="#">Register Your Domain Now</a>
-									</FadeComponent>
-								</div>
-							</div>
-						)}
-						<li
-							className="nav-item"
-							onClick={() => {
-								setIswebsiteHostingDomainSubmenuOpen(
-									!iswebsiteHostingSubmenuOpen
-								);
-								setIsDomainSubmenuOpen(false);
-								setIsSecuritySubmenuOpen(false);
-								setIsMarketingSubmenuOpen(false);
-								setIsSigninSubmenuOpen(false);
-							}}
-						>
-							Website & Hosting{" "}
-							<FontAwesomeIcon icon={faChevronUp} className="submenu-toggle" />
-							{iswebsiteHostingSubmenuOpen && (
-								<div className="website-hosting-submenu">
-									<FadeComponent duration={1000} delay={0} direction={"left"}>
-										<div className="submenu-content">
-											<div className="submenu-col">
-												<h3>Website</h3>
-												<div className="submenu-item">
-													<FontAwesomeIcon
-														icon={faLaptopCode}
-														className="submenu-icon"
-													/>
-													<h4>Website Builder Free Trial</h4>
-												</div>
-												<div className="submenu-item">
-													<FontAwesomeIcon
-														icon={faStore}
-														className="submenu-icon"
-													/>
-													<h4>Online Store</h4>
-												</div>
-												<div className="submenu-item">
-													<FontAwesomeIcon
-														icon={faArrowRight}
-														className="submenu-icon"
-													/>
-													<h4>All Website Options</h4>
-												</div>
-											</div>
-											<div className="submenu-col">
-												<h3 style={{ marginTop: "2rem" }}>Hosting</h3>
-												<div className="submenu-item">
-													<FontAwesomeIcon
-														icon={faServer}
-														className="submenu-icon"
-													/>
-													<h4>Web Hosting</h4>
-												</div>
-												<div className="submenu-item">
-													<FontAwesomeIcon
-														icon={faServer}
-														className="submenu-icon"
-													/>
-													<h4>WordPress Hosting</h4>
-												</div>
-												<div className="submenu-item">
-													<FontAwesomeIcon
-														icon={faServer}
-														className="submenu-icon"
-													/>
-													<h4>VPS Hosting</h4>
-												</div>
-												<div className="submenu-item">
-													<FontAwesomeIcon
-														icon={faArrowRight}
-														className="submenu-icon"
-													/>
-													<h4>All Hosting Options</h4>
-												</div>
-											</div>
-											<div className="submenu-col">
-												<h3>GoDaddy Pro</h3>
-												<div className="submenu-item">
-													<FontAwesomeIcon
-														icon={faGlobe}
-														className="submenu-icon"
-													/>
-													<h4>Tools for Web Professionals</h4>
-												</div>
-											</div>
-										</div>
-									</FadeComponent>
-									<FadeComponent duration={1000} delay={0} direction={"left"}>
-										<div className="submenu-image">
-											<img src={web_hosting} alt="Domain Image" />
-											<a href="#">Sell Online With WordPress Ecommerce</a>
-										</div>
-									</FadeComponent>
-								</div>
-							)}
-						</li>
-						<Link to="/email" className="router-link">
-							<li className="nav-item">Email</li>
-						</Link>
-						<li
-							className="nav-item"
-							onClick={() => {
-								setIsSecuritySubmenuOpen(!isSecuritySubmenuOpen);
-								setIsDomainSubmenuOpen(false);
-								setIswebsiteHostingDomainSubmenuOpen(false);
-								setIsMarketingSubmenuOpen(false);
-							}}
-						>
-							Security{" "}
-							<FontAwesomeIcon icon={faChevronUp} className="submenu-toggle" />
-							{isSecuritySubmenuOpen && (
-								<div className="security-submenu">
-									<FadeComponent duration={1000} delay={0} direction={"left"}>
-										<div className="submenu-content">
-											<div className="submenu-col">
-												<h3>SSL Certificates</h3>
-												<div className="submenu-item">
-													<FontAwesomeIcon
-														icon={faCertificate}
-														className="submenu-icon"
-													/>
-													<h4>SSL Certificates</h4>
-												</div>
-												<div className="submenu-item">
-													<FontAwesomeIcon
-														icon={faCertificate}
-														className="submenu-icon"
-													/>
-													<h4>Managed SSL Certificate</h4>
-												</div>
-											</div>
-											<div className="submenu-col">
-												<h3>Web Security</h3>
-												<div className="submenu-item">
-													<FontAwesomeIcon
-														icon={faLock}
-														className="submenu-icon"
-													/>
-													<h4>Website Security</h4>
-												</div>
-												<div div className="submenu-item">
-													<FontAwesomeIcon
-														icon={faArrowRight}
-														className="submenu-icon"
-													/>
-													<h4>All Web Security Options</h4>
-												</div>
-											</div>
-										</div>
-									</FadeComponent>
-									<FadeComponent duration={1000} delay={0} direction={"left"}>
-										<div className="submenu-image">
-											<img src={security} alt="Domain Image" />
-											<a href="#">
-												Sell Online With WordPress Ecommerce Hosting
-											</a>
-										</div>
-									</FadeComponent>
-								</div>
-							)}
-						</li>
+	const [domainSubmenu, setDomainSubmenu] = useState(false)
+	const [websiteHostingSubmenu, setWebsiteHostingSubmenu] = useState(false)
+	const [securitySubmenu, setSecuritySubmenu] = useState(false)
+	const [marketingSubmenu, setMarketingSubmenu] = useState(false)
+	const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false)
+	const domaimSubmenuData = [
+		{
+			maintitle: "FIND A DOMAIN",
+			listData: [
+				{
+					listIcon: faSearch,
+					listTitle: "Search for Domain Names",
+				},
+				{
+					listIcon: faBeer,
+					listTitle: "Transfer Domain Names",
+				},
+				{
+					listIcon: faHouseDamage,
+					listTitle: "Domain Extensions",
+				},
 
-						<li
-							className="nav-item"
-							onClick={() => {
-								setIsMarketingSubmenuOpen(!isMarketingSubmenuOpen);
-								setIsSecuritySubmenuOpen(false);
-								setIsDomainSubmenuOpen(false);
-								setIswebsiteHostingDomainSubmenuOpen(false);
-								setIsSigninSubmenuOpen(false);
-							}}
+			]
+		},
+		{
+			maintitle: "Auctions for Domains",
+			listData: [
+				{
+					listIcon: faGavel,
+					listTitle: "Auctions for Domain Names",
+				},
+				{
+					listIcon: faDollarSign,
+					listTitle: "Appraise Domain Name Value",
+				},
+				{
+					listIcon: faHandHoldingDollar,
+					listTitle: "Investing in Domain Names",
+				},
+
+			]
+		},
+		{
+			maintitle: "Domain Tools and Services",
+			listData: [
+				{
+					listIcon: faTools,
+					listTitle: "Generate Domain Names",
+				},
+				{
+					listIcon: faUser,
+					listTitle: "Find a Domain Owner (WHOIS)",
+				},
+				{
+					listIcon: faCube,
+					listTitle: "Domain Broker Service",
+				},
+
+			]
+		},
+	]
+	const websiteHostingSubmenuData = [
+		{
+			maintitle: "WEBSITES",
+			listData: [
+				{
+					listIcon: faLaptopCode,
+					listTitle: "Website Builder Free Trial",
+				},
+				{
+					listIcon: faStore,
+					listTitle: "Online Store",
+				},
+				{
+					listIcon: faArrowRight,
+					listTitle: "All Website Options",
+				},
+
+			]
+		},
+		{
+			maintitle: "HOSTING",
+			listData: [
+				{
+					listIcon: faServer,
+					listTitle: "Web Hosting",
+				},
+				{
+					listIcon: faServer,
+					listTitle: "WordPress Hosting",
+				},
+				{
+					listIcon: faServer,
+					listTitle: "VPS Hosting",
+				},
+				{
+					listIcon: faArrowRight,
+					listTitle: "All Hosting Options",
+				},
+			]
+		},
+		{
+			maintitle: "GODADDY PRO",
+			listData: [
+				{
+					listIcon: faGlobe,
+					listTitle: "Tools for Web Professionals",
+				},
+			]
+		},
+	]
+	const securitySubmenuData = [
+		{
+			maintitle: "SSL Certificates",
+			listData: [
+				{
+					listIcon: faCertificate,
+					listTitle: "SSL Certificates",
+				},
+				{
+					listIcon: faCertificate,
+					listTitle: "Managed SSL Certificate",
+				},
+			]
+		},
+		{
+			maintitle: "Web Security",
+			listData: [
+				{
+					listIcon: faLock,
+					listTitle: "Website Security",
+				},
+				{
+					listIcon: faArrowRight,
+					listTitle: "All Web Security Options",
+				},
+			]
+		},
+	]
+	const marketingSubmenuData = [
+		{
+			maintitle: "Marketing Tools",
+			listData: [
+				{
+					listIcon: faBullhorn,
+					listTitle: "Digital Marketing FREE TRIAL",
+				},
+				{
+					listIcon: faPencilRuler,
+					listTitle: "Logo Maker",
+				},
+				{
+					listIcon: faImage,
+					listTitle: "Content & Photo Creator",
+				},
+			]
+		},
+	]
+	const toggleMobileMenu = () => {
+		setIsMobileMenuOpen(!isMobileMenuOpen)
+	}
+	return (
+		<>
+			<div className='header-section-container'>
+				<div className='header-section-left-content'>
+					<div className='header-section-logo'>
+						<Link to='/'>
+							<img src={headerLogo} className='img-fluid' alt='header-godaddy-logo' />
+						</Link>
+					</div>
+
+					{/* Mobile Menu Toggle Button */}
+					<button className='mobile-menu-toggle' onClick={toggleMobileMenu}>
+						<FontAwesomeIcon icon={isMobileMenuOpen ? faTimes : faBars} />
+					</button>
+
+					{/* Menu Links - hidden on mobile when the menu is closed */}
+					<div className={`menu-links ${isMobileMenuOpen ? 'mobile-open' : ''}`}>
+						<a href='#'
+							onClick={() => { setDomainSubmenu(!domainSubmenu); setWebsiteHostingSubmenu(false); setSecuritySubmenu(false); setMarketingSubmenu(false) }}
 						>
-							Marketing{" "}
-							<FontAwesomeIcon icon={faChevronUp} className="submenu-toggle" />
-							{isMarketingSubmenuOpen && (
-								<div className="marketing-submenu">
+							Domains <FontAwesomeIcon icon={faGreaterThan} className='header-greater-than-icon' />
+						</a>
+						{domainSubmenu && <div className='header-domain-submenu-container'>
+							{domaimSubmenuData?.map((data, index) => (
+								<div className='header-domain-submenu-content-part' key={index}>
 									<FadeComponent duration={1000} delay={0} direction={"left"}>
-										<div className="submenu-content">
-											<div className="submenu-col">
-												<h3>Marketing Tools</h3>
-												<div className="submenu-item">
-													<FontAwesomeIcon
-														icon={faBullhorn}
-														className="submenu-icon"
-													/>
-													<h4>Digital Marketing Free Trial</h4>
-												</div>
-												<div className="submenu-item">
-													<FontAwesomeIcon
-														icon={faPencilRuler}
-														className="submenu-icon"
-													/>
-													<h4>Logo Maker</h4>
-												</div>
-												<div className="submenu-item">
-													<FontAwesomeIcon
-														icon={faImages}
-														className="submenu-icon"
-													/>
-													<h4>Content & Photo Creator</h4>
-												</div>
+										<h5>{data?.maintitle}</h5>
+										{data?.listData?.map((list, index) => (
+											<div key={index}>
+												<p><FontAwesomeIcon icon={list?.listIcon} className='header-domain-submenu-icon' /> {list?.listTitle}</p>
 											</div>
-										</div>
-									</FadeComponent>
-									<FadeComponent duration={1000} delay={0} direction={"left"}>
-										<div className="submenu-image">
-											<img src={web_hosting} alt="Domain Image" />
-											<a href="#">
-												Sell Online With WordPress Ecommerce Hosting
-											</a>
-										</div>
+										))}
 									</FadeComponent>
 								</div>
-							)}
-						</li>
-						<Link to="/pricing" className="router-link">
-							<li className="nav-item">Pricing</li>
+							))}
+							<div className='header-domain-submenu-img-part'>
+								<FadeComponent duration={1000} delay={0} direction={"up"}>
+									<img src={domainSubImg} className='img-fluid' alt='domain-submenu-img' />
+									<p>Register Your Domain Now</p>
+								</FadeComponent>
+							</div>
+						</div>}
+
+						<a href='#'
+							onClick={() => { setWebsiteHostingSubmenu(!websiteHostingSubmenu); setDomainSubmenu(false); setSecuritySubmenu(false); setMarketingSubmenu(false) }}
+						>
+							Websites and Hosting <FontAwesomeIcon icon={faGreaterThan} className='header-greater-than-icon' />
+						</a>
+						{websiteHostingSubmenu && <div className='header-domain-submenu-container'>
+							{websiteHostingSubmenuData?.map((data, index) => (
+								<div className='header-domain-submenu-content-part' key={index}>
+									<FadeComponent duration={1000} delay={0} direction={"left"}>
+										<h5>{data?.maintitle}</h5>
+										{data?.listData?.map((list, index) => (
+											<div key={index}>
+												<p><FontAwesomeIcon icon={list?.listIcon} className='header-domain-submenu-icon' /> {list?.listTitle}</p>
+											</div>
+										))}
+									</FadeComponent>
+								</div>
+							))}
+							<div className='header-domain-submenu-img-part'>
+								<FadeComponent duration={1000} delay={0} direction={"up"}>
+									<img src={webHostingSubImg} className='img-fluid' alt='domain-submenu-img' />
+									<p>Sell Online With WordPress Ecommerce Hosting</p>
+								</FadeComponent>
+							</div>
+						</div>}
+
+						<Link to='email'
+							onClick={() => { setDomainSubmenu(false); setMarketingSubmenu(false); setSecuritySubmenu(false); setWebsiteHostingSubmenu(false) }}
+						>
+							Email
 						</Link>
-					</ul>
-				</nav>{" "}
-				<div className="header-right">
-					<Link to="/contact" className="router-link">
-						<span className="header-link">Contact Us</span>
-					</Link>
-					<Link to="/help" className="router-link">
-						<span className="header-link">Help</span>
-					</Link>
-					<Link to="/signin" className="router-link">
-						<span className="header-link">Sign In</span>
-					</Link>
-					<span className="cart-icon">🛒</span>
+						<a href='#'
+							onClick={() => { setSecuritySubmenu(!securitySubmenu); setWebsiteHostingSubmenu(false); setDomainSubmenu(false); setMarketingSubmenu(false) }}
+						>
+							Security <FontAwesomeIcon icon={faGreaterThan} className='header-greater-than-icon' />
+						</a>
+						{securitySubmenu && <div className='header-domain-submenu-container'>
+							{securitySubmenuData?.map((data, index) => (
+								<div className='header-domain-submenu-content-part' key={index}>
+									<FadeComponent duration={1000} delay={0} direction={"left"}>
+										<h5>{data?.maintitle}</h5>
+										{data?.listData?.map((list, index) => (
+											<div key={index}>
+												<p><FontAwesomeIcon icon={list?.listIcon} className='header-domain-submenu-icon' /> {list?.listTitle}</p>
+											</div>
+										))}
+									</FadeComponent>
+								</div>
+							))}
+							<div className='header-domain-submenu-img-part'>
+								<FadeComponent duration={1000} delay={0} direction={"up"}>
+									<img src={securitySubImg} className='img-fluid' alt='domain-submenu-img' />
+									<p>Back Up Your Website for Peace of Mind</p>
+								</FadeComponent>
+							</div>
+						</div>}
+
+						<a href='#'
+							onClick={() => { setMarketingSubmenu(!marketingSubmenu); setSecuritySubmenu(false); setWebsiteHostingSubmenu(false); setDomainSubmenu(false) }}
+						>
+							Marketing <FontAwesomeIcon icon={faGreaterThan} className='header-greater-than-icon' />
+						</a>
+						{marketingSubmenu && <div className='header-domain-submenu-container'>
+							{marketingSubmenuData?.map((data, index) => (
+								<div className='header-domain-submenu-content-part' key={index}>
+									<FadeComponent duration={1000} delay={0} direction={"left"}>
+										<h5>{data?.maintitle}</h5>
+										{data?.listData?.map((list, index) => (
+											<div key={index}>
+												<p><FontAwesomeIcon icon={list?.listIcon} className='header-domain-submenu-icon' /> {list?.listTitle}</p>
+											</div>
+										))}
+									</FadeComponent>
+								</div>
+							))}
+							<div className='header-domain-submenu-img-part'>
+								<FadeComponent duration={1000} delay={0} direction={"up"}>
+									<img src={marketingSubImg} className='img-fluid' alt='domain-submenu-img' />
+									<p>Learn to Grow Your Business</p>
+								</FadeComponent>
+							</div>
+						</div>}
+						<Link to='/pricing'
+							onClick={() => { setDomainSubmenu(false); setMarketingSubmenu(false); setSecuritySubmenu(false); setWebsiteHostingSubmenu(false) }}
+						>
+							Pricing
+						</Link>
+					</div>
+				</div>
+
+				<div className='header-section-right-content'>
+					<Link to='/contact' onClick={()=>{setDomainSubmenu(false);setMarketingSubmenu(false);setSecuritySubmenu(false);setWebsiteHostingSubmenu(false)}} >Contact Us</Link>
+					<Link to='/help'onClick={()=>{setDomainSubmenu(false);setMarketingSubmenu(false);setSecuritySubmenu(false);setWebsiteHostingSubmenu(false)}}>Help</Link>
+					<Link to='/signin'onClick={()=>{setDomainSubmenu(false);setMarketingSubmenu(false);setSecuritySubmenu(false);setWebsiteHostingSubmenu(false)}}>Sign In</Link>
+					<a href='#'onClick={()=>{setDomainSubmenu(false);setMarketingSubmenu(false);setSecuritySubmenu(false);setWebsiteHostingSubmenu(false)}}><FontAwesomeIcon icon={faCartShopping} /></a>
 				</div>
 			</div>
-		</header>
-	);
-};
+		</>
+	)
+}
 
-export default Header;
+export default Header

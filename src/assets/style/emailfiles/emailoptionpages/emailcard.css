@@ -1,9 +1,8 @@
 .email-plans-container {
   display: flex;
-  flex-wrap: wrap;
   gap: 2rem;
   padding: 2rem;
-  margin: 0 10rem;
+  margin: 0 auto;
 }
 
 .email-plan-card {
@@ -101,7 +100,9 @@
   }
 
   .email-plans-container {
-    margin: 0;
+    flex-direction: column;
+    margin: 2rem 0;
+    padding: 0;
   }
 }
 

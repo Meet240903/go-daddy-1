@@ -53,9 +53,11 @@ const ProfessionalEmail = () => {
 				{/* Star rating */}
 				<div className="rating">
 					{" "}
-					{[...Array(4)].map((_, i) => (
-						<FontAwesomeIcon key={i} icon={faStar} className="star-icon" />
-					))}
+					<div className="rating-star">
+						{[...Array(4)].map((_, i) => (
+							<FontAwesomeIcon key={i} icon={faStar} className="star-icon" />
+						))}
+					</div>
 					<span className="rating-text">
 						4.6 out of 5 stars based on 105,049 reviews
 					</span>{" "}

@@ -32,3 +32,9 @@
   padding: 20px;
   background-color: #fff;
 }
+
+@media (max-width:768px) {
+  .tab-content{
+    padding: 0;
+  }
+}

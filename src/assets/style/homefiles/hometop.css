@@ -71,6 +71,10 @@
   /* Adjusts spacing for better layout */
 }
 
+.home-top-search-info p{
+  font-size: 16px;
+}
+
 .home-top-additional-input {
   width: 80%;
   border: none;
@@ -157,7 +161,8 @@
   }
 
   .home-top-search-button {
-    padding: 0.5rem 0.5rem;
+    padding: 0.2rem 0.5rem;
+    border-radius: 0;
     font-size: 0.875rem;
     width: 50%;
   }

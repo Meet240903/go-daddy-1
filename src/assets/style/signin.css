@@ -8,12 +8,33 @@
 
 /* Left Side - Quick Links */
 .left-content {
-  flex: 1;
   margin-right: 2rem;
   display: flex;
-  margin: 0 2rem;
+  margin: 0;
   justify-content: space-around;
   align-items: flex-start;
+  gap: 2rem;
+}
+
+.quick-link{
+  width: 100%;
+}
+
+.inbox-link{
+  width: 100%;
+}
+
+.quick-link h2,
+.inbox-link h3{
+  margin-bottom: 1rem;
+}
+
+.quick-link h3{
+  margin-bottom: 1rem;
+}
+
+.inbox-link li,.quick-link li{
+  font-size: 14px;
 }
 
 .left-content h2,
@@ -33,7 +54,6 @@
 
 .new-customer {
   padding: 0 2rem;
-
 }
 
 .create-account-button {
@@ -51,13 +71,12 @@
 }
 
 /* Right Side - Registered Users */
-.right-content {
-  flex: 1;
+.sign-in-right-content {
   margin-top: 0;
   margin-left: 2rem;
 }
 
-.right-content h2 {
+.sign-in-right-content h2 {
   color: #333;
 }
 
@@ -84,21 +103,22 @@
     flex-direction: column;
     align-items: center;
   }
-
+  .new-customer {
+    padding: 0;
+    margin-top: 2rem;
+  }
   .left-content,
-  .right-content {
+  .sign-in-right-content {
     margin: 0;
     width: 100%;
   }
 
   .left-content {
     display: flex;
-    flex-direction: column;
     align-items: flex-start;
-    margin-left: 30px;
   }
 
-  .right-content {
+  .sign-in-right-content {
     margin-top: 2rem;
   }
 }

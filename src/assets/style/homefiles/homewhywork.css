@@ -53,7 +53,7 @@
 
 @media (max-width: 768px) {
   .why-work-container {
-    margin: 0 5rem;
+    margin: 2rem 1rem !important;
   }
 
   .image-grid {
@@ -64,6 +64,12 @@
       "img3"
       "img4"
       "img5";
+  }
+  .why-work-container h1{
+    font-size: 1.5rem;
+  }
+  .why-work-container p{
+    text-align: justify;
   }
 }
 

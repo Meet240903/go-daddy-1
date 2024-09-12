@@ -6,7 +6,6 @@ import {
 	faChevronRight,
 } from "@fortawesome/free-solid-svg-icons";
 import "../../assets/style/homefiles/homeslider.css"; // Import the CSS file
-import { width } from "@fortawesome/free-solid-svg-icons/fa0";
 import star_icon from "../../assets/images/star_icon.webp";
 
 const cards = [

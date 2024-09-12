@@ -7,7 +7,7 @@ const SignIn = () => {
 		<div className="signin-container">
 			{/* Left Side - Quick Links */}
 			<div className="left-content">
-				<div>
+				<div className="quick-link">
 					<h2>Quick Links</h2>
 					<h3>Control Panel Links:</h3>
 					<ul>
@@ -18,7 +18,7 @@ const SignIn = () => {
 						<li>Manage Email</li>
 					</ul>
 				</div>
-				<div>
+				<div className="inbox-link">
 					<h3>Inbox Links:</h3>
 					<ul>
 						<li>Office 365 Email Login</li>
@@ -37,7 +37,7 @@ const SignIn = () => {
 			</div>
 			<hr />
 			{/* Right Side - Registered Users */}
-			<div className="right-content">
+			<div className="sign-in-right-content">
 				<h2>Registered Users</h2>
 				<p>Have an account? Sign in now.</p>
 				<Link to="/sign_in">

@@ -1,3 +1,5 @@
+/* General Styles (desktop/tablet) */
+
 .home_card-slider {
   margin: 5rem 5rem;
   overflow: hidden;
@@ -6,9 +8,7 @@
 
 .home_slider-wrapper {
   position: relative;
-
   display: flex;
-
   align-items: center;
   overflow: hidden;
 }
@@ -73,65 +73,90 @@
 }
 
 .home_arrow_right {
-
   border-radius: 50%;
   padding: 10px;
   background-color: #fff;
 }
 
-/* Responsive design */
-@media (max-width: 1200px) {
-  .home_card {
-    flex: 0 0 250px;
-    /* Adjusts card width for smaller screens */
-  }
-}
-
-@media (max-width: 992px) {
-  .home_card {
-    flex: 0 0 220px;
-  }
-}
-
-@media (max-width: 768px) {
-  .home_card {
-    flex: 0 0 200px;
-  }
-}
-
+/* Responsive Design for Mobile */
 @media (max-width: 576px) {
   .home_card-slider {
-    margin: 3rem 2rem;
-    /* Adjusts margin for small screens */
+    margin: 1rem;
+    width: 350px;
+    overflow: hidden;
+    margin: 0 auto;
+    position: relative;
   }
 
-  .home_card {
-    flex: 0 0 330px;
+  .home_arrow_left{
+    margin-bottom: 1rem;
+  }
+  .home_arrow_right{
+    position: absolute;
+    top: 0; 
+    right: 0;
+  }
+  .home_slider-wrapper {
+    display: block; /* Changes the layout to block for column view */
   }
 
   .home_cards-container {
+    display: flex;
     flex-direction: column;
-    gap: 2rem;
+    gap: 1rem; /* Adds spacing between the cards */
+    width: 100%; /* Full-width cards in a column */
+  }
+
+  .home_card {
+    flex: 1 0 auto;
+    width: 100%; /* Full-width card in mobile */
+    margin: 0 auto;
+    padding: 15px;
   }
 
   .home_arrow {
+    display: none; /* Hides next/prev arrows on mobile */
+  }
+
+  .home_stars {
+    justify-content: center;
+  }
+
+  .home_card-slider h1 {
     font-size: 1.2rem;
-    display: none;
+    text-align: center;
+    margin-bottom: 20px;
+  }
+
+  .home_card h1 {
+    font-size: 1rem;
+  }
+
+  .home_card p {
+    font-size: 0.9rem;
+    margin-bottom: 15px;
   }
 }
 
 @media (max-width: 400px) {
-  .home_card {
-    flex: 0 0 150px;
-  }
-
   .home_card-slider {
-    margin: 2rem 1rem;
-    /* Adjusts margin for small screens */
+    margin: 1rem 0.5rem;
   }
 
-  .home_arrow {
-    /* padding: 3px; */
+  .home_card {
+    padding: 10px;
+    width: 100%; /* Full width even on ultra-small screens */
+  }
+
+  .home_stars {
+    justify-content: center;
+  }
+
+  .home_card h1 {
     font-size: 1rem;
+  }
+
+  .home_card p {
+    font-size: 0.85rem;
   }
 }

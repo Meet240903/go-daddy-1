@@ -163,10 +163,16 @@
 }
 
 @media (max-width: 768px) {
+  .home-domain-ai-text-overlay{
+    padding: 1rem;
+    max-width: 100%;
+  }
   .home-domain-ai-text-overlay h1 {
     font-size: 2rem;
   }
-
+  .home-domain-ai-card-container{
+    width: 100%;
+  }
   .home-domain-ai-text-overlay p {
     font-size: 1rem;
   }
@@ -175,6 +181,9 @@
   .home-domain-ai-try-domain-button {
     padding: 0.5rem 1rem;
     font-size: 0.875rem;
+  }
+  .home-domain-ai-section{
+    margin: 0;
   }
 }
 

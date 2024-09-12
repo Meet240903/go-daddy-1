@@ -1,7 +1,6 @@
 import React from "react";
 import "../../assets/style/homefiles/homedomain.css";
 import domainai from "../../assets/images/go-daddy-domain.jpg";
-import logo from "../../assets/images/godaddy-logo.svg";
 const HomeDomainAiSection = () => {
 	return (
 		<div className="home-domain-ai-section">

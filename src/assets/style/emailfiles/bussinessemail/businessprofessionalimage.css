@@ -82,6 +82,7 @@
   .professional_image_section {
     flex-direction: column;
     text-align: center;
+    margin-top: 2rem;
   }
 
   .reverse {
@@ -96,6 +97,11 @@
   .professional_image_left-content,
   .professional_image_right-content {
     padding: 0.5rem;
+  }
+
+  .professional_image_left-content p,
+  .professional_image_right-content p{
+    text-align: justify;
   }
 }
 

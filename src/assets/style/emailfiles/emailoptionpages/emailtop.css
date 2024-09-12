@@ -97,7 +97,8 @@
     height: auto;
     flex-direction: column;
     margin-top: 20px;
-    gap: 3px;
+    gap: 10px !important;
+    padding: 10px 0;
   }
 
   .trustpilot-logo {

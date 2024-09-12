@@ -91,6 +91,7 @@
 .light-blue {
   height: 500px;
   width: 700px;
+  padding: 10px;
   background-color: #2189c4;
   transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
 }
@@ -142,6 +143,10 @@
     transform: scale(1.05);
     box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
   }
+  .business_button button{
+    width: 50% !important;
+    margin: 0 auto;
+  }
 }
 
 @media (max-width: 480px) {
@@ -150,7 +155,7 @@
   }
 
   .business_button button {
-    width: 100%;
+    width: 50%;
     padding: 0.5rem 1rem;
     font-size: 0.8rem;
   }
@@ -171,18 +176,29 @@
   .light-pink {
     width: 100%;
     max-width: 100%;
+    height: auto;
   }
 
+  .box .text-overlay{
+    position: relative;
+    top: 0;
+  }
+  .box .text-overlay p{
+    color: #fff;
+  }
   .box .text-overlay,
   .box .text-overlay_1 {
     padding: 10px;
     font-size: 0.9rem;
+    flex-direction: column;
   }
 
   .box .text-overlay button,
   .box .text-overlay_1 button {
     padding: 0.5rem 1rem;
-    font-size: 0.8rem;
+    font-size: 14px !important;
+    width: auto;
+    margin: 0 auto;
   }
 
   .text-overlay_right img {

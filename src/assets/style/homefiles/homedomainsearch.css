@@ -167,11 +167,12 @@
     padding: 1rem;
     height: 30vh;
     background-position: center;
+    margin: 1rem 0;
   }
 
   .content-right-search {
     width: 100%;
-    padding: 0 5rem;
+    padding: 0;
   }
 
   .content-right-search h1 {

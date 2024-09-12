@@ -113,6 +113,9 @@
     height: 200px;
     /* Adjust height for mobile screens */
   }
+  .slider-container h1{
+    font-size: 1.5rem;
+  }
 }
 
 /* Responsive styling for small mobile screens */

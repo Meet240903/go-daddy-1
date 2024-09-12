@@ -68,4 +68,11 @@ h4 {
   .faq-item p {
     font-size: 0.95rem;
   }
+  .faq-page{
+    margin-top: 2rem;
+  }
+
+  .faq-page h1{
+    font-size: 1rem;
+  }
 }
